@@ -1,0 +1,27 @@
+Description 
+
+- Create a simple UI that allows the end user to upload a message file. Once the file is uploaded, email message level data should be displayed in the UI.
+- Sample message files can be found in the "smallset" directory.  
+- The only hard requirements are listed below – we have left a lot of room for you to make implementation decisions on your own. 
+- Add any documentation that you think is necessary for someone to successfully review and run your code.  
+- Share completed exercise via Github/Gitlab link, zip file etc.
+- A senior engineer will review and run your code. 
+- If your sample passes the code review, we will schedule a follow up technical interview with our team where we will ask you to make changes and run your code in a live session over Zoom. 
+
+Requirements 
+
+Using your choice of programming languages listed below, implement an API driven web application. 
+1) API: Using Go, Python, or PHP, implement an API that can parse an email message supplied by the UI. The API should return the following email headers: 
+- To 
+- From 
+- Date 
+- Subject 
+- Message-ID 
+2) UI: implement a UI that allows a user to supply raw email message data via file upload and display the results. After the message file is uploaded, the UI should display the following pieces of information: 
+- To 
+- From 
+- Date 
+- Subject 
+3) Docker (optional): Utilizing Docker with container orchestration (such as Docker Compose), build and run your completed web app. 
+
+ 

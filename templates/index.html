@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <title>File Upload</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.1/min/dropzone.min.css"
+    />
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Our CSS -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <h1 id="title" class="text-center">File Upload</h1>
+    <form
+      method="POST"
+      action="{{ url_for('upload_files') }}"
+      class="dropzone"
+    ></form>
+
+    <p class="text-center">
+      <a
+        class="btn btn-outline-primary btn-lg"
+        href="{{ url_for('msg_parser', filename=filename) }}"
+        role="button"
+        >Read the message</a
+      >
+      <button
+        class="btn btn-outline-primary btn-lg"
+        type="button"
+        data-toggle="collapse"
+        data-target="#collapseExample"
+        aria-expanded="false"
+        aria-controls="collapseExample"
+      >
+        Show the message
+      </button>
+    </p>
+    <div class="collapse" id="collapseExample">
+      <div class="card card-body">
+        {% if message %}
+        <h4>File: {{ message.name }}</h4>
+        <p>To: {{message.to}}</p>
+        <p>From: {{message.from}}</p>
+        <p>Date: {{message.date}}</p>
+        <p>Subject: {{message.subject}}</p>
+        {% endif %}
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.1/min/dropzone.min.js"></script>
+  </body>
+</html>

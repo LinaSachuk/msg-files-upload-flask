@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    padding: 5%;
+    font-family: 'Playfair Display', serif;
+    /* background-color: rgba(50, 115, 220, 0.2); */
+  
+    background-image: url('https://wallpapercave.com/wp/PPMnOZM.jpg');
+    /* background-image: url('../img/canvas.png'); */
+  
+    height: 100%;
+    width: 100%;
+
+    /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+#title{
+    color: rgb(25, 9, 63);
+}
+
+#collapseExample{
+    margin: 5%;
+}
